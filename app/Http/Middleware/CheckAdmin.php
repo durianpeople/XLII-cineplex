@@ -21,6 +21,7 @@ class CheckAdmin
             if ($user->role=='user')
                 return redirect()->intended('/');    
         }
-        else return $next($request);
+        else return redirect()->intended('/');
+        return $next($request);
     }
 }
