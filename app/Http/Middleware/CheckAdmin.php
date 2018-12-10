@@ -18,11 +18,9 @@ class CheckAdmin
     {
         if (Auth::check()) {
             $user=Auth::user();
-            if ($user->role=='admin')
-                return $next($request);
+            if ($user->role=='user')
+                return redirect()->intended('/');    
         }
-            
-        else return redirect()->intended('/');
-        
+        else return $next($request);
     }
 }

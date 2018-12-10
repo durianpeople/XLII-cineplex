@@ -11,12 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.welcome');
-});
-
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/main', 'HomeController@main')->name('main');
+Route::get('/', 'FilmController@daftarFilm');
 Route::get('/admin', 'AdminController@dashboard');
