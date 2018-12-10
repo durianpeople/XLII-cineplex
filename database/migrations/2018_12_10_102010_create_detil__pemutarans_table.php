@@ -17,8 +17,8 @@ class CreateDetilPemutaransTable extends Migration
             $table->string('id_putar');
             $table->string('id_studio');
             $table->string('id_film');
-            $table->time('jam_mulai');
-            $table->time('jam_selesai');
+            $table->string('jam_mulai');
+            $table->string('jam_selesai');
             $table->integer('harga_per_tiket');
             $table->timestamps();
         });
