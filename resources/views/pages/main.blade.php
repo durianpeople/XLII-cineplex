@@ -1,4 +1,4 @@
-@extends(layouts.app)
+@extends('layouts.app')
 
 @section('content')
 <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
