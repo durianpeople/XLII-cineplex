@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-Di sini daftar film
+<?php use App\Film; ?>
+Film yang tersedia:<br>
+<ul>
+	@foreach(Film::all() as $film)
+		<li>{{$film->nama_film}}</li>
+	@endforeach
+</ul>
 @endsection
