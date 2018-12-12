@@ -1,15 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<<<<<<< HEAD
-<?php use App\Film; ?>
-Film yang tersedia:<br>
-<ul>
-	@foreach(Film::all() as $film)
-		<li>{{$film->id_film}}: {{$film->nama_film}}</li>
-	@endforeach
-</ul>
-=======
 
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
 	<div class="col-md-5 p-lg-5 mx-auto my-5">
@@ -64,5 +55,4 @@ Film yang tersedia:<br>
 
 </div>
 
->>>>>>> d0c62bf3a38b7774d6143dc0142a939d1e367705
 @endsection
