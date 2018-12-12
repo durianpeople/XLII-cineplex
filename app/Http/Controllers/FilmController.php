@@ -8,6 +8,6 @@ use App\Http\Controllers\Controller;
 class FilmController extends Controller
 {
     public function daftarFilm() {
-        return view('pages.film.daftar');
+        return view('pages.film.main');
     }
 }
