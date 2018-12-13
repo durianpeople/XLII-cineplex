@@ -20,3 +20,5 @@ Route::get('/admin', 'AdminController@dashboard');
 Route::get('/testing', function(){
 	return view('test');
 });
+
+Route::resource('posts','ListController');
