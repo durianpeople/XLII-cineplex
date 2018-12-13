@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
-class DetailPemutaranSeeder extends Seeder
+class DetilPemutaranSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +11,7 @@ class DetailPemutaranSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('detil_pemutaran')->insert([
+        DB::table('detilpemutarans')->insert([
             'id_putar' => 'DP001',
             'id_studio' => 'S01',
             'id_film' => 'F0001',
