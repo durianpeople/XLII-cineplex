@@ -11,7 +11,7 @@ class DetilPemutaranSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('detilpemutarans')->insert([
+        DB::table('detil_pemutarans')->insert([
             'id_putar' => 'DP001',
             'id_studio' => 'S01',
             'id_film' => 'F0001',
