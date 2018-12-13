@@ -3,7 +3,7 @@
 @section('content')
 
 <main role="main">
-	<div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top:60px;">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			<li data-target="#myCarousel" data-slide-to="1"></li>
@@ -36,5 +36,58 @@
 		</a>
 	</div>
 	
+	<div class="container" style = "margin-bottom:40px;">
+			<h1 class="my-4" style="text-align:center; padding-top:50px;">POPULAR TITLES</h1>
+	
+		<div class="row">
+			<div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+			<div class="card h-100">
+				<a href="#"><img class="card-img-top" src="images/aquaman.jpg" alt="" style="max-width:100%; max-height:100%;"></a>
+				<div class="card-body">
+				<h4 class="card-title" style="height:100px;">
+					<p>Aquaman</p>
+				</h4>
+				<p><a class="btn btn-lg btn-primary" href="" role="button">Read More</a></p>
+				</div>
+			</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+			<div class="card h-100">
+				<a href="#"><img class="card-img-top" src="images/ralph.jpg" alt="" style="max-width:100%; max-height:100%;"></a>
+				<div class="card-body">
+				<h4 class="card-title" style="height:100px;">
+					<p>Ralph Breaks the Internet</p>
+				</h4>
+				<p><a class="btn btn-lg btn-primary" href="" role="button">Read More</a></p>
+				</div>
+			</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+				<div class="card h-100">
+					<a href="#"><img class="card-img-top" src="images/fantastic.jpg" alt="" style="max-width:100%; max-height:100%;"></a>
+					<div class="card-body">
+					<h4 class="card-title" style="height:100px;">
+						<p>Fantastic Beasts: The Crimes of Grindelwald<p>
+					</h4>
+					<p><a class="btn btn-lg btn-primary" href="" role="button">Read More</a></p>
+					</div>
+				</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+				<div class="card h-100" >
+					<a href="#"><img class="card-img-top" src="images/robin.jpg" alt="" style="max-width:100%; max-height:100%;"></a>
+					<div class="card-body">
+					<h4 class="card-title" style="height:100px;">
+						<p>Robin Hood<p>
+					</h4>
+					<p><a class="btn btn-lg btn-primary" href="" role="button">Read More</a></p>
+					</div>
+				</div>
+				</div>
+		</div>
+	
+	
+		</div>
+	</div>
 	</div>
 @endsection

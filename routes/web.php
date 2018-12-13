@@ -16,6 +16,9 @@ Route::get('/', 'FilmController@daftarFilm');
 Route::get('/nowshowing', function(){
     return view ('pages.film.nowshowing');
 });
+Route::get('/comingsoon', function(){
+    return view ('pages.film.comingsoon');
+});
 Route::get('/admin', 'AdminController@dashboard');
 Route::get('/testing', function(){
 	return view('test');
