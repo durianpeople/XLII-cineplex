@@ -1,7 +1,5 @@
 <?php
 
 use App\Film;
-foreach(Film::with('pemutaran')->get() as $d) {
-	var_dump($d);
-}
+echo Film::find('F0001')->nama_film;
 ?>

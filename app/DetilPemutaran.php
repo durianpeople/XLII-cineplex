@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class DetilPemutaran extends Model
 {
+	protected $primaryKey='id_putar';
     public function film() {
-		return $this->belongsTo('App\Film','id_film');
+		return $this->belongsTo('App\Film');
 	}
 }
