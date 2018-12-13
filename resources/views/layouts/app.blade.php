@@ -23,20 +23,33 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" >
+            <div class="container" style="height:50px;" >
+                <a class="navbar-brand" href="{{ url('/') }}" >
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
+                        <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        </ul>
+                    </div>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -78,5 +91,92 @@
             @yield('content')
         </main>
     </div>
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4" style="background-color:#263238">
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+    
+          <!-- Grid row -->
+          <div class="row" style ="text-align:center;">
+    
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+    
+              <!-- Content -->
+              <h3 class="text-uppercase" style ="color:white; text-align:center; padding-bottom:10px">Contact Us</h3>
+              <ul class="list-unstyled" >   
+                    <li>
+                        <img src="images/twitter.png" style="width:60px; height:auto; padding:5px;"> 
+                        <img src="images/facebook.png" style="width:60px; height:auto; padding:5px;">
+                        <img src="images/youtube.png" style="width:60px; height:auto; padding:5px;">
+                        <img src="images/instagram.png" style="width:60px; height:auto; padding:5px;">
+                        <img src="images/pinterest.png" style="width:60px; height:auto; padding:5px;">
+                    </li>   
+                </ul>
+    
+            </div>
+            <!-- Grid column -->
+    
+            <hr class="clearfix w-100 d-md-none pb-3">
+    
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+    
+                <!-- Links -->
+                <h5 class="text-uppercase" style ="color:white;">Our Company</h5>
+    
+                <ul class="list-unstyled" style ="color:white;">
+                  <li>
+                    Our Brands
+                  </li>
+                  <li>
+                    Contact Us
+                  </li>
+                  <li>
+                    FAQs
+                  </li>
+                  <li>
+                    Careers
+                  </li>
+                  <li>
+                    Privacy Policy
+                </li>
+                </ul>
+    
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-3 mb-md-0 mb-3">
+    
+                <!-- Links -->
+                <h5 class="text-uppercase" style ="color:white">Movies</h5>
+    
+                <ul class="list-unstyled" style ="color:white;">
+                  <li>
+                    Movies
+                  </li>
+                  <li>
+                   Theaters
+                  </li>
+                  <li>
+                    Ratings Information
+                  </li>
+                  <li>
+                    IMAX
+                  </li>
+                  <li>
+                    Dolby Cinema
+                    </li>
+                </ul>
+    
+              </div>
+              <!-- Grid column -->
+    
+          </div>
+          <!-- Grid row -->
+    
+        </div>
 </body>
 </html>
