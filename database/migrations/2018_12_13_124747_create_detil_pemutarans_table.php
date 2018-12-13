@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDetilpemutaransTable extends Migration
+class CreateDetilPemutaransTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDetilpemutaransTable extends Migration
      */
     public function up()
     {
-        Schema::create('detilpemutarans', function (Blueprint $table) {
+        Schema::create('detil_pemutarans', function (Blueprint $table) {
             $table->string('id_putar')->primary();
             $table->string('id_studio');
             $table->string('id_film');
@@ -21,6 +21,8 @@ class CreateDetilpemutaransTable extends Migration
             $table->string('jam_selesai');
             $table->integer('harga_per_tiket');
             $table->timestamps();
+
+            $table->foreign('id_film')->references('id_film')->on('films');
         });
     }
 
@@ -31,6 +33,6 @@ class CreateDetilpemutaransTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detilpemutarans');
+        Schema::dropIfExists('detil_pemutarans');
     }
 }

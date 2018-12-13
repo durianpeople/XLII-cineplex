@@ -8,6 +8,6 @@ class Film extends Model
 {
     //
     public function pemutaran() {
-        return $this->hasMany('App\DetilPemutaran');
+        return $this->hasMany('App\DetilPemutaran','id_film');
     }
 }
