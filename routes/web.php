@@ -15,3 +15,6 @@ Auth::routes();
 Route::get('/', 'FilmController@daftarFilm');
 Route::get('/nowshowing', 'FilmController@nowShowing' );
 Route::get('/admin', 'AdminController@dashboard');
+Route::get('/testing', function(){
+	return view('test');
+});
