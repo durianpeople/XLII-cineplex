@@ -15,7 +15,7 @@
 					<div class="carousel-caption text-left">
 						<h1>Now Showing</h1>
 						<p>Buat ngeliat ke daftar film yang ada di detail pemutaran</p>
-						<p><a class="btn btn-lg btn-primary" href="#" role="button">Now Showing</a></p>
+						<p><a class="btn btn-lg btn-primary" href="/nowshowing" role="button">Now Showing</a></p>
 					</div>
 				</div>
 			</div>
@@ -25,7 +25,7 @@
 					<div class="carousel-caption text-right">
 						<h1>Coming Soon</h1>
 						<p>Buat lihat film yang udah didaftarin tapi ga ada di detail pemutaran</p>
-						<p><a class="btn btn-lg btn-primary" href="#" role="button">Coming Soon</a></p>
+						<p><a class="btn btn-lg btn-primary" href="/comingsoon" role="button">Coming Soon</a></p>
 					</div>
 				</div>
 			</div>

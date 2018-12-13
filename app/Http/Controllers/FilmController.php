@@ -10,4 +10,5 @@ class FilmController extends Controller
     public function daftarFilm() {
         return view('pages.film.main');
     }
+
 }

@@ -13,4 +13,5 @@
 
 Auth::routes();
 Route::get('/', 'FilmController@daftarFilm');
+Route::get('/nowshowing', '' );
 Route::get('/admin', 'AdminController@dashboard');
