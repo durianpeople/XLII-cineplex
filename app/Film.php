@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Film extends Model
 {
-    //
-    public function pemutaran() {
+    protected $primaryKey='id_film';
+    public $incrementing=false;
+    public function detilpemutaran() {
         return $this->hasMany('App\DetilPemutaran','id_film');
     }
 }
