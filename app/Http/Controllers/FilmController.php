@@ -11,4 +11,8 @@ class FilmController extends Controller
         return view('pages.film.main');
     }
 
+    public function nowShowing() {
+        return view('pages.film.nowshowing');
+    }
+
 }
