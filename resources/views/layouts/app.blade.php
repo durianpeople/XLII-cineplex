@@ -43,7 +43,7 @@
                             <a class="nav-link" href="/aboutus">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/buy">Buy Tickets</a>
+                            <a class="nav-link" href="/buytickets">Buy Tickets</a>
                         </li>
                         </ul>
                     </div>
@@ -104,11 +104,11 @@
               <h3 class="text-uppercase" style ="color:white; text-align:center; padding-bottom:10px">Contact Us</h3>
               <ul class="list-unstyled" >   
                     <li>
-                        <img src="images/twitter.png" style="width:60px; height:auto; padding:5px;"> 
-                        <img src="images/facebook.png" style="width:60px; height:auto; padding:5px;">
-                        <img src="images/youtube.png" style="width:60px; height:auto; padding:5px;">
-                        <img src="images/instagram.png" style="width:60px; height:auto; padding:5px;">
-                        <img src="images/pinterest.png" style="width:60px; height:auto; padding:5px;">
+                        <img src="images/twitter1.png" style="width:80px; height:auto; padding:0px;"> 
+                        <img src="images/facebook1.png" style="width:60px; height:auto; padding:5px; margin-right:5px">
+                        <img src="images/youtube1.png" style="width:80px; height:auto; padding:10px; margin-right:5px">
+                        <img src="images/instagram1.png" style="width:60px; height:auto; padding:5px; margin-right:5px">
+                        <img src="images/pinterest1.png" style="width:60px; height:auto; padding:5px;">
                     </li>   
                 </ul>
     
@@ -125,7 +125,7 @@
     
                 <ul class="list-unstyled" style ="color:white;">
                   <li>
-                    Our Brands
+                    Our Cinemas
                   </li>
                   <li>
                     Contact Us

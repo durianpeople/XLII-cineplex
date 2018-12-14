@@ -19,6 +19,9 @@ Route::get('/nowshowing', function(){
 Route::get('/comingsoon', function(){
     return view ('pages.film.comingsoon');
 });
+Route::get('/buytickets', function(){
+    return view ('pages.buytickets');
+});
 Route::get('/admin', 'AdminController@dashboard');
 Route::get('/testing', function(){
 	return view('test');
