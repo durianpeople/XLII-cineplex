@@ -14,7 +14,7 @@ class FilmController extends Controller
     }
 
     public function nowShowing() {
-        $films = Film::all();
+        $films = Film::orderBy('id_film','asc')->paginate(4);
         return view('pages.film.nowshowing')->with('films',$films);
     }
 
