@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ListController extends Controller
+use App\Film;
+
+class FilmsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,8 @@ class ListController extends Controller
      */
     public function index()
     {
-        return view('films.index');
+        $films = Film::all();
+        return view('pages.film.nowshowing')->with('films',$films);
     }
 
     /**

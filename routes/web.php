@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\FilmController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +15,8 @@
 
 Auth::routes();
 Route::get('/', 'FilmController@daftarFilm');
-Route::get('/nowshowing', function(){
-    return view ('pages.film.nowshowing');
-});
+Route::get('/nowshowing', 'FilmController@nowShowing');
+
 Route::get('/comingsoon', function(){
     return view ('pages.film.comingsoon');
 });
@@ -27,4 +28,4 @@ Route::get('/testing', function(){
 	return view('test');
 });
 
-Route::resource('posts','ListController');
+// Route::resource('films','FilmsController');

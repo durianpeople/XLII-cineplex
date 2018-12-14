@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\Film;
+
 class FilmController extends Controller
 {
     public function daftarFilm() {
@@ -12,7 +14,8 @@ class FilmController extends Controller
     }
 
     public function nowShowing() {
-        return view('pages.film.nowshowing');
+        $films = Film::all();
+        return view('pages.film.nowshowing')->with('films',$films);
     }
 
 }

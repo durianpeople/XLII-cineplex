@@ -18,6 +18,7 @@ class CreateFilmsTable extends Migration
             $table->string('nama_film');
             $table->integer('tahun_pembuatan');
             $table->integer('durasi');
+            $table->string('image');
             $table->timestamps();
         });
 

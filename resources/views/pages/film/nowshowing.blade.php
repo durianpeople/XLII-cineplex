@@ -4,52 +4,23 @@
 
 <div class="container" >
         <h1 class="my-4" style="text-align:center; padding-top:50px;">NOW SHOWING</h1>
-
-    <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="images/aquaman.jpg" alt="" style="max-width:100%; max-height:100%;"></a>
-            <div class="card-body">
-            <h4 class="card-title">
-                <a href="#">Project One</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
-            </div>
-        </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="images/ralph.jpg" alt="" style="max-width:100%; max-height:100%;"></a>
-            <div class="card-body">
-            <h4 class="card-title">
-                <a href="#">Project Two</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="images/fantastic.jpg" alt="" style="max-width:100%; max-height:100%;"></a>
-                <div class="card-body">
-                <h4 class="card-title">
-                    <a href="#">Project One</a>
-                </h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+        <div class="row">
+        @if(count($films)>0)
+            @foreach ($films as $film)
+                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="{{$film->id_film}}"><img class="card-img-top" src="images/{{$film->image}}" alt="" style="max-width:100%; max-height:100%;"></a>
+                    <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="{{$film->id_film}}">{{$film->nama_film}}</a>
+                    </h4>
+                    </div>
                 </div>
-            </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div class="card h-100" >
-                <a href="#"><img class="card-img-top" src="images/robin.jpg" alt="" style="max-width:100%; max-height:100%;"></a>
-                <div class="card-body">
-                <h4 class="card-title">
-                    <a href="#">Project Two</a>
-                </h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
                 </div>
-            </div>
-            </div>
+            @endforeach
+        @else
+            <h1>No films yet!</h1>
+        @endif
     </div>
 
     <ul class="pagination justify-content-center">
