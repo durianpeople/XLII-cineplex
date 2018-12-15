@@ -14,8 +14,22 @@ class FilmAdminController extends AdminController
         return view('pages.admin.film');
     }
 
+    public function create() {
+        return view('pages.admin.filmEdit')->with('mode','add');
+    }
+
+    public function createConfirm() {
+        $film=Film::create([
+            'nama_film' => Input::get('nama_film'),
+            'tahun_pembuatan' => Input::get('tahun_pembuatan'),
+            'durasi' => Input::get('durasi'),
+        ]);
+        //Storage::disk('public_upload')->put('film_art/'.$film->id_film.'.png', file_get_contents(Input::file('image')->getRealPath()));
+        return redirect()->intended('/admin/film');
+    }
+
     public function edit() {
-        return view('pages.admin.filmEdit');
+        return view('pages.admin.filmEdit')->with('mode','edit');
     }
 
     public function editConfirm() {

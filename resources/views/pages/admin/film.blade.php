@@ -9,5 +9,6 @@ use App\Film;
 <li><a href="/admin/film/{{$film->id_film}}">{{$film->nama_film}}</a> 
 <a href="/admin/film/delete/{{$film->id_film}}">(hapus)</a></li>
 <?php endforeach;?>
+<a href="/admin/film/add/">Tambah film</a>
 </ul>
 @endsection
