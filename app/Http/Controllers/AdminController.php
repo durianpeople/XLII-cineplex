@@ -34,9 +34,8 @@ class AdminController extends Controller
             $film->tahun_pembuatan = Input::get('tahun_pembuatan');
         if ($film->durasi != Input::get('durasi'))
             $film->durasi = Input::get('durasi');
-        if (Input::hasFile('image')) {
-            Storage::disk('local')->put($film->id_film, file_get_contents(Input::file('image')->getRealPath()));
-        }
+        if (Input::hasFile('image')) 
+            Storage::disk('public_upload')->put('film_art/'.$film->id_film.'.png', file_get_contents(Input::file('image')->getRealPath()));
 
         $film->save();
         return redirect()->intended('/admin/film');

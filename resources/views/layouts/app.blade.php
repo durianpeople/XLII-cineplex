@@ -104,11 +104,11 @@
               <h3 class="text-uppercase" style ="color:white; text-align:center; padding-bottom:10px">Contact Us</h3>
               <ul class="list-unstyled" >   
                     <li>
-                        <img src="images/twitter1.png" style="width:80px; height:auto; padding:0px;"> 
-                        <img src="images/facebook1.png" style="width:60px; height:auto; padding:5px; margin-right:5px">
-                        <img src="images/youtube1.png" style="width:80px; height:auto; padding:10px; margin-right:5px">
-                        <img src="images/instagram1.png" style="width:60px; height:auto; padding:5px; margin-right:5px">
-                        <img src="images/pinterest1.png" style="width:60px; height:auto; padding:5px;">
+                        <img src="/images/twitter1.png" style="width:80px; height:auto; padding:0px;"> 
+                        <img src="/images/facebook1.png" style="width:60px; height:auto; padding:5px; margin-right:5px">
+                        <img src="/images/youtube1.png" style="width:80px; height:auto; padding:10px; margin-right:5px">
+                        <img src="/images/instagram1.png" style="width:60px; height:auto; padding:5px; margin-right:5px">
+                        <img src="/images/pinterest1.png" style="width:60px; height:auto; padding:5px;">
                     </li>   
                 </ul>
     

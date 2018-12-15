@@ -21,5 +21,12 @@ Route::get('/buytickets', 'FilmController@buyTickets');
 
 Route::get('/testing', 'FilmController@testing');
 
-Route::get('/admin', 'AdminController@dashboard');
+Route::prefix('admin')->group(function(){
+    Route::get('/', 'AdminController@dashboard');
+    Route::prefix('/film')->group(function(){
+        Route::get('/','AdminController@film');
+        Route::post('/{id}','AdminController@filmEditSubmit');
+        Route::get('/{id}','AdminController@filmEdit');
+    });
+});
 // Route::resource('films','FilmsController');
