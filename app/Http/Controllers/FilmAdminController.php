@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Request;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\AdminController;
 use App\Film;
 
