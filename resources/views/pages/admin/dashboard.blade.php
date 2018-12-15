@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-This is admin section
+<ul>
+	<li><a href="/admin/film">Atur Film</a></li>
+</ul>
 @endsection

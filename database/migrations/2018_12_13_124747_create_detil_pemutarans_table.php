@@ -14,9 +14,9 @@ class CreateDetilPemutaransTable extends Migration
     public function up()
     {
         Schema::create('detil_pemutarans', function (Blueprint $table) {
-            $table->string('id_putar')->primary();
-            $table->string('id_studio');
-            $table->string('id_film');
+            $table->increments('id_putar');
+            $table->unsignedInteger('id_studio');
+            $table->unsignedInteger('id_film');
             $table->string('jam_mulai');
             $table->string('jam_selesai');
             $table->integer('harga_per_tiket');
