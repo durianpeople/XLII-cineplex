@@ -39,9 +39,7 @@
                             <span class="sr-only">(current)</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/aboutus">About Us</a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="/buytickets">Buy Tickets</a>
                         </li>
@@ -142,7 +140,6 @@
                 </ul>
     
               </div>
-              <!-- Grid column -->
     
               <!-- Grid column -->
               <div class="col-md-3 mb-md-0 mb-3">
