@@ -14,11 +14,10 @@ class CreateFilmsTable extends Migration
     public function up()
     {
         Schema::create('films', function (Blueprint $table) {
-            $table->string('id_film')->primary();
+            $table->increments('id_film');
             $table->string('nama_film');
             $table->integer('tahun_pembuatan');
             $table->integer('durasi');
-            $table->string('image');
             $table->timestamps();
         });
 
