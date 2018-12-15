@@ -16,16 +16,10 @@ use App\Http\Controllers\FilmController;
 Auth::routes();
 Route::get('/', 'FilmController@daftarFilm');
 Route::get('/nowshowing', 'FilmController@nowShowing');
+Route::get('/comingsoon', 'FilmController@comingSoon');
+Route::get('/buytickets', 'FilmController@buyTickets');
 
-Route::get('/comingsoon', function(){
-    return view ('pages.film.comingsoon');
-});
-Route::get('/buytickets', function(){
-    return view ('pages.buytickets');
-});
+Route::get('/testing', 'FilmController@testing');
+
 Route::get('/admin', 'AdminController@dashboard');
-Route::get('/testing', function(){
-	return view('test');
-});
-
 // Route::resource('films','FilmsController');
