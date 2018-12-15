@@ -437,6 +437,7 @@ class ComposerStaticInitd5937c0a6c552861c8bbaab781807e89
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\FilmAdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/FilmAdminController.php',
         'App\\Http\\Controllers\\FilmController' => __DIR__ . '/../..' . '/app/Http/Controllers/FilmController.php',
         'App\\Http\\Controllers\\FilmsController' => __DIR__ . '/../..' . '/app/Http/Controllers/FilmsController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',

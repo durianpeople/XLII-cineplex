@@ -19,6 +19,8 @@ Route::get('/nowshowing', 'FilmController@nowShowing');
 Route::get('/comingsoon', 'FilmController@comingSoon');
 Route::get('/buytickets', 'FilmController@buyTickets');
 
+Route::get('/details/{id}', 'FilmController@details');
+
 Route::get('/testing', 'FilmController@testing');
 
 Route::prefix('admin')->group(function(){
