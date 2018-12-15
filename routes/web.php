@@ -24,9 +24,10 @@ Route::get('/testing', 'FilmController@testing');
 Route::prefix('admin')->group(function(){
     Route::get('/', 'AdminController@dashboard');
     Route::prefix('/film')->group(function(){
-        Route::get('/','AdminController@film');
-        Route::post('/{id}','AdminController@filmEditSubmit');
-        Route::get('/{id}','AdminController@filmEdit');
+        Route::get('/','FilmAdminController@film');
+        Route::post('/{id}','FilmAdminController@editConfirm');
+        Route::get('/{id}','FilmAdminController@edit');
+        Route::get('/delete/{id}','FilmAdminController@delete');
     });
 });
 // Route::resource('films','FilmsController');
