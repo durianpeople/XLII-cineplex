@@ -51,6 +51,8 @@
 
         </div>
         <div class="col-md-8 order-md-1">
+
+            <div class="d-block my-3">
           
             <h4 class="mb-3">Payment</h4>
 

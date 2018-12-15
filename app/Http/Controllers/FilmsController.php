@@ -49,7 +49,7 @@ class FilmsController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**

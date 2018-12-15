@@ -18,6 +18,9 @@ Route::get('/', 'FilmController@daftarFilm');
 Route::get('/nowshowing', 'FilmController@nowShowing');
 Route::get('/comingsoon', 'FilmController@comingSoon');
 Route::get('/buytickets', 'FilmController@buyTickets');
+Route::get('/read', function() {
+    return view('pages/film/read');
+});
 
 Route::get('/details/{id}', 'FilmController@details');
 
