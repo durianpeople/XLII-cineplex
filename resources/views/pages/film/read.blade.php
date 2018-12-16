@@ -9,7 +9,7 @@
 
     <div class="container">
         <div class="card mt-4">
-        <img class="card-img-top img-fluid" src="" alt="gambar disini">
+        <img class="card-img-top img-fluid" src="/uploads/film_art/{{$film->id_film}}.png" alt="gambar disini">
         <div class="card-body">
           <h2 class="card-title">{{$film->nama_film}}</h2>
           <h5> {{$film->tahun_pembuatan}} </h3>

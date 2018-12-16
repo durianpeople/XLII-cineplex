@@ -44,12 +44,12 @@
 			@foreach ($films as $film)
 				<div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
 				<div class="card h-100">
-					<a href="/read/{{$film->id_film}}"><img class="card-img-top" src="uploads/film_art/{{$film->id_film}}.png" alt="" style="max-width:100%; max-height:100%;"></a>
+					<a href="/film/{{$film->id_film}}"><img class="card-img-top" src="uploads/film_art/{{$film->id_film}}.png" alt="" style="max-width:100%; max-height:100%;"></a>
 					<div class="card-body">
 					<h4 class="card-title" style="height:100px;">
 						<p>{{$film->nama_film}}</p>
 					</h4>
-					<p><a class="btn btn-lg btn-primary" href="/read/{{$film->id_film}}" role="button">Read More</a></p>
+					<p><a class="btn btn-lg btn-primary" href="/film/{{$film->id_film}}" role="button">Read More</a></p>
 					</div>
 				</div>
 				</div>
