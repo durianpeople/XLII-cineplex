@@ -11,10 +11,11 @@
         <div class="card mt-4">
         <img class="card-img-top img-fluid" src="" alt="gambar disini">
         <div class="card-body">
-          <h2 class="card-title">Judul disini</h2>
-          <h5> Tahun pembuatan disini </h3>
-          <small >Genre disini  </small><small> Durasi disini </small>
-          <h4 style="margin-top:20px;">Harga disini</h4>
+          <h2 class="card-title">{{$film->nama_film}}</h2>
+          <h5> {{$film->tahun_pembuatan}} </h3>
+          <small >Genre:  </small>
+          <br><small> Durasi: {{$film->durasi}} menit</small>
+          <h4 style="margin-top:20px;">Harga Rp???.00</h4>
           <p class="card-text">
                 <div class="d-block my-3">
                    
