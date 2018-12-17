@@ -43,7 +43,7 @@ class FilmSeeder extends Seeder
             'durasi' => NULL,
         ]);
         DB::table('films')->insert([
-            'nama_film' => 'Captain Marvel',
+            'nama_film' => 'The Lego Movie Sequel',
             'tahun_pembuatan' => '2019',
             'durasi' => NULL,
         ]);
