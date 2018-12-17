@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             GenreSeeder::class,
             FilmGenreSeeder::class,
             TransaksiSeeder::class,
+            StudioSeeder::class,
         ]);
     }
 }
