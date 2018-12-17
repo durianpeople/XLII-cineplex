@@ -9,10 +9,10 @@
             @foreach ($films as $film)
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="/read/{{$film->id_film}}"><img class="card-img-top" src="uploads/film_art/{{$film->id_film}}.png" alt="" style="max-width:100%; max-height:100%;"></a>
+                    <a href="/film/{{$film->id_film}}"><img class="card-img-top" src="uploads/film_art/{{$film->id_film}}.png" alt="{{$film->nama_film}}" style="max-width:100%; max-height:100%;"></a>
                     <div class="card-body">
                     <h4 class="card-title">
-                        <a href="/read/{{$film->id_film}}">{{$film->nama_film}}</a>
+                        <a href="/film/{{$film->id_film}}">{{$film->nama_film}}</a>
                     </h4>
                     </div>
                 </div>

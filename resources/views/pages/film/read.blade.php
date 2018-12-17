@@ -9,7 +9,7 @@
 
     <div class="container">
         <div class="card mt-4">
-        <img class="card-img-top img-fluid" src="/uploads/film_art/{{$film->id_film}}.png" alt="gambar disini">
+        <img class="card-img-top img-fluid" src="/uploads/film_art/{{$film->id_film}}.png" alt="{{$film->nama_film}}">
         <div class="card-body">
           <h2 class="card-title">{{$film->nama_film}}</h2>
           <h5> {{$film->tahun_pembuatan}} </h3>
@@ -20,7 +20,6 @@
             @endforeach
           </small>
           <br><small> Durasi: {{$film->durasi}} menit</small>
-          <h4 style="margin-top:20px;">Harga Rp{{$harga->harga_per_tiket}}.00</h4>
           <p class="card-text">
                 <div class="d-block my-3">
                    

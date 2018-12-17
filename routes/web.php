@@ -18,7 +18,6 @@ Route::get('/', 'FilmController@daftarFilm');
 Route::get('/nowshowing', 'FilmController@nowShowing');
 Route::get('/comingsoon', 'FilmController@comingSoon');
 Route::get('/buytickets', 'FilmController@buyTickets')->middleware('auth');
-Route::get('/read/{id}', 'FilmController@details');
 
 Route::get('/film/{id}', 'FilmController@details');
 
