@@ -18,6 +18,7 @@ Route::get('/', 'FilmController@daftarFilm');
 Route::get('/nowshowing', 'FilmController@nowShowing');
 Route::get('/comingsoon', 'FilmController@comingSoon');
 Route::post('/checkout', 'TransaksiController@checkout')->middleware('auth');
+Route::get('/buytickets', 'FilmController@buyTickets');
 
 Route::get('/film/{id}', 'FilmController@details');
 
