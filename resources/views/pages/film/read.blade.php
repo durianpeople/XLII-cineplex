@@ -31,6 +31,7 @@
                   'id' => 'buytickets',
                 ]);
               ?>
+              <br><br>
                 <label for="id_putar">Jam: </label>
                 <select name="id_putar" form="buytickets">
                   @foreach($pemutarans as $pemutaran)
