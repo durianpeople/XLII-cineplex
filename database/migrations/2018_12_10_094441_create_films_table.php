@@ -17,7 +17,7 @@ class CreateFilmsTable extends Migration
             $table->increments('id_film');
             $table->string('nama_film');
             $table->integer('tahun_pembuatan');
-            $table->integer('durasi');
+            $table->integer('durasi')->nullable();
             $table->timestamps();
         });
 

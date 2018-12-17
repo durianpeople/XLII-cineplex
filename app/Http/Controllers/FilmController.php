@@ -15,12 +15,12 @@ use DB;
 class FilmController extends Controller
 {
     public function daftarFilm() {
-        $films = Film::orderBy('id_film','asc')->paginate(4);
+        $films = Film::whereNotNull('durasi')->orderBy('id_film','asc')->paginate(4);
         return view('pages.film.main')->with('films',$films);
     }
 
     public function nowShowing() {
-        $films = Film::orderBy('id_film','asc')->paginate(4);
+        $films = Film::whereNotNull('durasi')->orderBy('id_film','asc')->paginate(4);
         return view('pages.film.nowshowing')->with('films',$films);
     }
 
@@ -33,7 +33,8 @@ class FilmController extends Controller
     }
 
     public function comingSoon() {
-        return view ('pages.film.comingsoon');
+        $films = Film::whereNull('durasi')->paginate(4);
+        return view ('pages.film.comingsoon')->with('films',$films);
     }
 
     public function buyTickets() {
