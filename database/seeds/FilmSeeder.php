@@ -37,5 +37,15 @@ class FilmSeeder extends Seeder
             'tahun_pembuatan' => '2018',
             'durasi' => '90',
         ]);
+        DB::table('films')->insert([
+            'nama_film' => 'How to Train Your Dragon: The Hidden World',
+            'tahun_pembuatan' => '2019',
+            'durasi' => NULL,
+        ]);
+        DB::table('films')->insert([
+            'nama_film' => 'The Lego Movie Sequel',
+            'tahun_pembuatan' => '2019',
+            'durasi' => NULL,
+        ]);
     }
 }
