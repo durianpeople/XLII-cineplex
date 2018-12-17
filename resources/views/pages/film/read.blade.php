@@ -20,7 +20,6 @@
             @endforeach
           </small>
           <br><small> Durasi: {{$film->durasi}} menit</small>
-          <h4 style="margin-top:20px;">Harga Rp{{$harga->harga_per_tiket}}.00</h4>
           <p class="card-text">
                 <div class="d-block my-3">
                    
