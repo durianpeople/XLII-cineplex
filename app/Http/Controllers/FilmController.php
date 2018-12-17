@@ -29,7 +29,8 @@ class FilmController extends Controller
         $film = Film::find($id);
         $filmgenres = FilmGenre::where('id_film',$id)->pluck('id_genre');
         $genres = Genre::whereIn('id_genre',$filmgenres)->get();
-        return view('pages.film.read')->with('film',$film)->with('filmgenres',$filmgenres)->with('genres',$genres);
+        $pemutarans = DetilPemutaran::where('id_film', $id)->get();
+        return view('pages.film.read')->with('film',$film)->with('filmgenres',$filmgenres)->with('genres',$genres)->with('pemutarans',$pemutarans);
     }
 
     public function comingSoon() {

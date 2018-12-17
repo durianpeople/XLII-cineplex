@@ -24,11 +24,24 @@
                     {{$genre->nama_genre}}
                 @endforeach
               </small>
-              <br><small> Durasi: {{$film->durasi}} menit</small>
-              <p class="card-text">
-                    <div class="d-block my-3">
-                <a href="/buytickets" class="btn btn-primary">Buy Tickets</a> <br>
-              </p>
+              <br><small> Durasi: {{$film->durasi}} menit</small><br>
+              <?php
+                echo Form::open([
+                  'url' => '/checkout',
+                  'id' => 'buytickets',
+                ]);
+              ?>
+                <label for="id_putar">Jam: </label>
+                <select name="id_putar" form="buytickets">
+                  @foreach($pemutarans as $pemutaran)
+                    <option value="{{$pemutaran->id_putar}}">{{$pemutaran->jam_mulai}} - {{$pemutaran->jam_selesai}}</option>
+                  @endforeach
+                </select><br>
+                <label for="jumlah_tiket">Jumlah: </label>
+                <input type="number" name="jumlah_tiket" value="1" /><br>
+                <input type="submit" value="Buy Ticket" class="btn btn-primary" />
+              <?php echo Form::close(); ?>
+              
             </div>  
           </div>
       </div>

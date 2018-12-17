@@ -17,8 +17,7 @@ Auth::routes();
 Route::get('/', 'FilmController@daftarFilm');
 Route::get('/nowshowing', 'FilmController@nowShowing');
 Route::get('/comingsoon', 'FilmController@comingSoon');
-Route::get('/buytickets', 'FilmController@buyTickets')->middleware('auth');
-Route::get('/checkout', 'CheckoutController@total');
+Route::post('/checkout', 'TransaksiController@checkout')->middleware('auth');
 
 Route::get('/film/{id}', 'FilmController@details');
 
