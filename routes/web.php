@@ -36,5 +36,6 @@ Route::prefix('admin')->group(function(){
     });
     Route::get('/transaksi', 'TransaksiAdminController@list');
     Route::get('/putar', 'DetilPemutaranAdminController@list');
+    Route::get('/user', 'UserAdminController@list');
 });
 // Route::resource('films','FilmsController');
