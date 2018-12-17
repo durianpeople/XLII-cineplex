@@ -32,13 +32,13 @@
                 ]);
               ?>
               <br><br>
-                <label for="id_putar">Jam: </label>
+                <label for="id_putar"><em>Jam: </em></label>
                 <select name="id_putar" form="buytickets">
                   @foreach($pemutarans as $pemutaran)
                     <option value="{{$pemutaran->id_putar}}">{{$pemutaran->jam_mulai}} - {{$pemutaran->jam_selesai}}</option>
                   @endforeach
                 </select><br>
-                <label for="jumlah_tiket">Jumlah: </label>
+                <label for="jumlah_tiket"><em>Jumlah: </em></label>
                 <input type="number" name="jumlah_tiket" value="1" /><br>
                 <input type="submit" value="Buy Ticket" class="btn btn-primary" />
               <?php echo Form::close(); ?>

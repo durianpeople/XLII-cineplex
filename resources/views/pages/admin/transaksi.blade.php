@@ -4,7 +4,8 @@ use App\Transaksi;
 @extends('layouts.app')
 
 @section('content')
-<table class="table">
+<div class="container">
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col">ID Transaksi</th>
@@ -26,4 +27,5 @@ use App\Transaksi;
         @endforeach
         </tbody>
     </table>
+</div>
 @endsection
