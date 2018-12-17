@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             DetilPemutaranSeeder::class,
             GenreSeeder::class,
             FilmGenreSeeder::class,
+            TransaksiSeeder::class,
         ]);
     }
 }

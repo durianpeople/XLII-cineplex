@@ -14,10 +14,11 @@ class CreateTransaksisTable extends Migration
     public function up()
     {
         Schema::create('transaksis', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_transaksi');
             $table->unsignedInteger('id_putar');
             $table->unsignedInteger('id_user');
             $table->unsignedInteger('jumlah_tiket');
+            $table->integer('harga_total')->default(0);
             $table->timestamps();
 
             $table->foreign('id_putar')->references('id_putar')->on('detil_pemutarans');

@@ -33,5 +33,7 @@ Route::prefix('admin')->group(function(){
         Route::get('/{id}','FilmAdminController@edit');
         Route::get('/delete/{id}','FilmAdminController@delete');
     });
+    Route::get('/transaksi', 'TransaksiAdminController@list');
+    Route::get('/putar', 'DetilPemutaranAdminController@list');
 });
 // Route::resource('films','FilmsController');
