@@ -97,7 +97,7 @@
         </main>
     </div>
 <!-- Footer -->
-<footer class="page-footer font-small blue pt-4" style="background-color:#263238">
+<footer class="page-footer font-small blue pt-4" style="background-color:#263238; ">
 
         <!-- Footer Links -->
         <div class="container-fluid text-center text-md-left">
