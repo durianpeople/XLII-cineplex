@@ -13,7 +13,12 @@
         <div class="card-body">
           <h2 class="card-title">{{$film->nama_film}}</h2>
           <h5> {{$film->tahun_pembuatan}} </h3>
-          <small >Genre:  </small>
+          <small >Genre:  
+            @foreach ($genres as $genre)
+                {{$loop->first ? '' : ','}}
+                {{$genre->nama_genre}}
+            @endforeach
+          </small>
           <br><small> Durasi: {{$film->durasi}} menit</small>
           <h4 style="margin-top:20px;">Harga Rp???.00</h4>
           <p class="card-text">

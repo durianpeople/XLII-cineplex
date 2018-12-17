@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Film;
+use App\FilmGenre;
+use App\Genre;
+
+use DB;
 
 class FilmController extends Controller
 {
@@ -22,7 +26,9 @@ class FilmController extends Controller
     public function details($id)
     {
         $film = Film::find($id);
-        return view('pages.film.read')->with('film',$film);
+        $filmgenres = FilmGenre::where('id_film',$id)->pluck('id_genre');
+        $genres = Genre::whereIn('id_genre',$filmgenres)->get();
+        return view('pages.film.read')->with('film',$film)->with('filmgenres',$filmgenres)->with('genres',$genres);
     }
 
     public function comingSoon() {
