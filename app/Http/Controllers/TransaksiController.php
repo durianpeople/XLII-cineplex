@@ -17,6 +17,9 @@ class TransaksiController extends Controller
         $transaksi->id_user=Auth::user()->id;
         $transaksi->jumlah_tiket=Input::get('jumlah_tiket');
         $transaksi->harga_total=DetilPemutaran::find(Input::get('id_putar'))->harga_per_tiket*Input::get('jumlah_tiket');
+        if (Input::get('checkout')=='1')
+            if ($transaksi->save())
+                return redirect()->intended('/');
         return view('pages.checkout')->with('transaksi', $transaksi);
     }
 }
