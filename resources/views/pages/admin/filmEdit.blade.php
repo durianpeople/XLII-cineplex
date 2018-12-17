@@ -8,11 +8,18 @@ use Illuminate\Support\Facades\Storage;
 if ($mode=="edit")
 	$film=Film::find(Request::route('id'));
 ?>
-<?php if ($mode=="edit"): ?>
-<form action="/admin/film/{{$film->id_film}}" method="post" enctype='multipart/form-data'>
-<?php elseif ($mode=="add"): ?>
-<form action="/admin/film/add" method="post" enctype='multipart/form-data'>
-<?php endif; ?>
+<?php
+if ($mode=="edit")
+echo Form::model($film, [
+	'url' => '/admin/film/'.$film->id_film,
+	'files' => true,
+]);
+else if ($mode=="add")
+echo Form::open([
+	'url' => '/admin/film/add',
+	'files' => true,
+]);
+?>
 <label for="nama_film">Nama Film</label>
 <input type="text" name="nama_film" value="<?php echo ($mode=='edit')?$film->nama_film:'';?>"/>
 <br>
@@ -33,5 +40,5 @@ Tambahkan gambar dengan fitur edit
 <?php endif;?>
 <br>
 <input type="submit" value="Submit" />
-</form>
+<?php Form::close(); ?>
 @endsection
