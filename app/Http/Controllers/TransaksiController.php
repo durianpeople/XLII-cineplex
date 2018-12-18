@@ -19,7 +19,11 @@ class TransaksiController extends Controller
         $transaksi->harga_total=DetilPemutaran::find(Input::get('id_putar'))->harga_per_tiket*Input::get('jumlah_tiket');
         if (Input::get('checkout')=='1')
             if ($transaksi->save())
-                return redirect()->intended('/');
+                return redirect()->intended('/tickets');
         return view('pages.checkout')->with('transaksi', $transaksi);
+    }
+
+    public function tickets() {
+        return view('pages.tickets');
     }
 }
