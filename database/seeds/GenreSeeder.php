@@ -39,5 +39,14 @@ class GenreSeeder extends Seeder
         DB::table('genres')->insert([
             'nama_genre' => 'Horror',
         ]);
+        DB::table('genres')->insert([
+            'nama_genre' => 'Mystery',
+        ]);
+        DB::table('genres')->insert([
+            'nama_genre' => 'Documentary',
+        ]);
+        DB::table('genres')->insert([
+            'nama_genre' => 'Crime',
+        ]);
     }
 }
