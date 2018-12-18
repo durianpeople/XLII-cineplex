@@ -26,13 +26,15 @@ Route::get('/testing', 'FilmController@testing');
 
 Route::prefix('admin')->group(function(){
     Route::get('/', 'AdminController@dashboard');
-    Route::prefix('/film')->group(function(){
+    Route::prefix('film')->group(function(){
         Route::get('/','FilmAdminController@film');
         Route::get('/add','FilmAdminController@create');
         Route::post('/add','FilmAdminController@createConfirm');
-        Route::post('/{id}','FilmAdminController@editConfirm');
         Route::get('/{id}','FilmAdminController@edit');
         Route::get('/delete/{id}','FilmAdminController@delete');
+        Route::post('/add-putar','FilmAdminController@addputar');
+        Route::get('/delete-putar/{id}','FilmAdminController@deleteputar');
+        Route::post('/{id}','FilmAdminController@editConfirm');
     });
     Route::get('/transaksi', 'TransaksiAdminController@list');
     Route::get('/putar', 'DetilPemutaranAdminController@list');

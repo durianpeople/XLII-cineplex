@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\AdminController;
 use App\Film;
+use App\DetilPemutaran;
 
 class FilmAdminController extends AdminController
 {
@@ -49,6 +50,24 @@ class FilmAdminController extends AdminController
 
     public function delete() {
         Film::find(Request::route('id'))->delete();
+        return redirect()->intended('/admin/film');
+    }
+
+    public function addputar() {
+        $putar=DetilPemutaran::create([
+            'id_studio' => 1,
+            'id_film' => Input::get('id_film'),
+            'jam_mulai' => Input::get('jam_mulai'),
+            'jam_selesai' => Input::get('jam_selesai'),
+            'harga_per_tiket' => 45000,
+        ]);
+        
+        return redirect()->intended('/admin/film');
+    }
+
+    public function deleteputar() {
+        $putar=DetilPemutaran::find(Request::route('id'));
+        $putar->delete();
         return redirect()->intended('/admin/film');
     }
 }

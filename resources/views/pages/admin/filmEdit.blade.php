@@ -3,10 +3,13 @@
 @section('content')
 <?php 
 use App\Film;
+use App\DetilPemutaran;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Storage;
-if ($mode=="edit")
+if ($mode=="edit") {
 	$film=Film::find(Request::route('id'));
+	$pemutarans=DetilPemutaran::where('id_film', $film->id_film)->get();
+}
 ?>
 
 <div class="container">
@@ -44,6 +47,34 @@ if ($mode=="edit")
 	</div>
 	<br>
 	<input type="submit" value="Submit" />
-	<?php Form::close(); ?>
+	<?php echo Form::close(); ?>
+	@if($mode=="edit")
+	<h1>Daftar pemutaran</h1>
+	<ul>
+		@foreach($pemutarans as $pemutaran)
+			<li>{{$pemutaran->jam_mulai}} - {{$pemutaran->jam_selesai}} <a href="/admin/film/delete-putar/{{$pemutaran->id_putar}}">(hapus)</a></li>
+		@endforeach
+	</ul>
+
+	<?php echo Form::open([
+		'url' => '/admin/film/add-putar',
+	]);?>
+		<input type="hidden" name="id_film" value="{{$film->id_film}}" />
+		<input type="time" id="jm" name="jam_mulai" min="10:00" max="22:00"> - <input type="time" id="js" name="jam_selesai" min="10:00" max="22:00">
+		<input type="submit" value="Tambah jadwal" />
+	<?php echo Form::close(); ?>
+	<script>
+	$(function(){
+		$('#jm').change(function(){
+			$('#js').val(addTime($('#jm').val(),{{$film->durasi}}));
+		});
+	})
+	function addTime(time, minsToAdd) {
+		var newTime = new Date(new Date("1970/01/01 " + time).getTime() + minsToAdd * 60000).toLocaleTimeString('en-UK', { hour: '2-digit', minute: '2-digit', hour12: false });
+		return newTime;
+	}
+	</script>
+	@endif
 </div>
+
 @endsection
