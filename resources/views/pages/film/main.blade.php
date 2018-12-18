@@ -10,7 +10,7 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img class="first-slide" src="images/aquaman cover 2.jpg" alt="First slide" style="max-width:100%; max-height:100%;">
+				<img class="first-slide" src="images/aquaman cover 2.jpg" alt="First slide" >
 				<div class="container">
 					<div class="carousel-caption text-center">
 						<p><a class="btn btn-lg btn-success" href="/nowshowing" role="button">Now Showing</a></p>
@@ -18,7 +18,7 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img class="second-slide" src="images/dragon cover.jpg" alt="Second slide" style="max-width:100%; max-height:100%;">
+				<img class="second-slide" src="images/dragon cover.jpg" alt="Second slide" >
 				<div class="container">
 					<div class="carousel-caption text-center">
 						<p><a class="btn btn-lg btn-danger" href="/comingsoon" role="button">Coming Soon</a></p>
@@ -35,7 +35,8 @@
 			<span class="sr-only">Next</span>
 		</a>
 	</div>
-	
+
+
 	<div class="container" style = "margin-bottom:40px;">
 		<h1 class="my-4" style="text-align:center; padding-top:50px;">POPULAR TITLES</h1>
 	

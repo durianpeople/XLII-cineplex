@@ -3,7 +3,8 @@
 @section('content')
 
 <div class="container" >
-        <h1 class="my-4" style="text-align:center; padding-top:50px;">COMING SOON</h1>
+        <a href="/nowshowing" class="btn btn-success">Now Showing</a>
+        <h1 class="my-4" style="text-align:center; ">COMING SOON</h1>
     @if (count($films)>0)
         <div class="row">
         @foreach ($films as $film)
