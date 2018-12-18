@@ -10,8 +10,6 @@ use App\FilmGenre;
 use App\Genre;
 use App\DetilPemutaran;
 
-use DB;
-
 class FilmController extends Controller
 {
     public function daftarFilm() {
@@ -39,7 +37,10 @@ class FilmController extends Controller
     }
 
     public function buyTickets() {
-        return view ('pages.buytickets');
+        $id_pemutaran = DetilPemutaran::pluck('id_film');
+        $films = Film::whereIn('id_film',$id_pemutaran)->pluck('nama_film');
+        $jam = DetilPemutaran::select('jam_mulai','jam_selesai')->distinct()->get();
+        return view ('pages.buytickets')->with('id_pemutaran',$id_pemutaran)->with('films',$films)->with('jam',$jam);
     }
 
     public function testing() {

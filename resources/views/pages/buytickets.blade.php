@@ -2,16 +2,6 @@
 
 @section('content')
 <?php
-use App\Film;
-use App\DetilPemutaran;
-$id_pemutarans=[];
-foreach(DetilPemutaran::all() as $pemutaran) {
-	$id_pemutarans[]=$pemutaran->id_film;
-}
-$films=[];
-foreach(Film::find($id_pemutarans) as $film) {
-	$films[$film->id_film]=$film->nama_film;
-}
 echo Form::open([
 	'url' => '/checkout',
 	'id' => 'buytickets',
@@ -24,9 +14,11 @@ echo Form::open([
 	<?php endforeach;?>
 </select>
 <br>
-<label for="id_putar">Jam</label>
-<select name="id_putar" form="buytickets">
-	
+<label for="jam">Jam</label>
+<select name="jam" form="buytickets">
+	<?php foreach($jam as $jam1): ?>
+	<option value="{{$jam1}}">{{$jam1->jam_mulai}} - {{$jam1->jam_selesai}}</option>
+	<?php endforeach;?>
 </select>
 <input type="submit" value="Submit" />
 <?php echo Form::close(); ?>
