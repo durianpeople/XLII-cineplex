@@ -47,5 +47,45 @@ class FilmSeeder extends Seeder
             'tahun_pembuatan' => '2019',
             'durasi' => NULL,
         ]);
+        DB::table('films')->insert([
+            'nama_film' => 'Captain Marvel',
+            'tahun_pembuatan' => '2019',
+            'durasi' => NULL,
+        ]);
+        DB::table('films')->insert([
+            'nama_film' => 'Happy Death Day 2U',
+            'tahun_pembuatan' => '2019',
+            'durasi' => NULL,
+        ]);
+        DB::table('films')->insert([
+            'nama_film' => 'The Possession of Hannah Grace',
+            'tahun_pembuatan' => '2018',
+            'durasi' => '86',
+        ]);
+        DB::table('films')->insert([
+            'nama_film' => 'Spider-Man: Into the Spider-Verse',
+            'tahun_pembuatan' => '2018',
+            'durasi' => '117',
+        ]);
+        DB::table('films')->insert([
+            'nama_film' => 'The Kid Who Would be King',
+            'tahun_pembuatan' => '2019',
+            'durasi' => NULL,
+        ]);
+        DB::table('films')->insert([
+            'nama_film' => 'Pick of the Litter',
+            'tahun_pembuatan' => '2018',
+            'durasi' => '81',
+        ]);
+        DB::table('films')->insert([
+            'nama_film' => 'Backtrace',
+            'tahun_pembuatan' => '2018',
+            'durasi' => '92',
+        ]);
+        DB::table('films')->insert([
+            'nama_film' => 'Bumblebee',
+            'tahun_pembuatan' => '2018',
+            'durasi' => NULL,
+        ]);
     }
 }
